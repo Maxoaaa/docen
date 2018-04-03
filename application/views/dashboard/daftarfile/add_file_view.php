@@ -25,46 +25,68 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal" action="<?php echo base_url('dashboard'); ?>" method="post">
+            <?php
+              $atribut = array(
+                  'class' => 'form-horizontal',
+                  'id'=>'formuser'
+              );
+                echo form_open('list/adddocument/savedok',$atribut);
+            ?>
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama dan No. Surat</label>
+                  <label class="col-sm-2 control-label">No. Dokumen</label>
                   <div class="col-sm-6">
                     <input type="text" class="form-control" name="no_surat" id="no_Surat" placeholder="Nomor"/>
                   </div>
                 </div>
                 <div class="form-group">
+                  <label class="col-sm-2 control-label">Nama Dokumen</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" name="nama_surat" id="nama_Surat" placeholder="Nama"/>
+                  </div>
+                </div>
+                <div class="form-group">
                   <label class="col-sm-2 control-label">Kelompok Dokumen</label>
                   <div class="col-sm-6">                    
-                    <select class="form-control selecto" style="width: 100%;" multiple="multiple" data-placeholder="Pilih Standar">
-                      <option>Standar 1</option>
-                      <option>Standar 2</option>
-                      <option>Standar 3</option>
-                      <option>Standar 4</option>
-                      <option>Standar 5</option>
-                      <option>Standar 6</option>
-                      <option>Standar 7</option>
-                      <option>Standar 8</option>
-                      <option>Standar 9</option>
+                    <select class="form-control selecto" style="width: 100%;" multiple="multiple" data-placeholder="Pilih Standar" name="kelompok[]">
+                      <option value="1">Standar 1</option>
+                      <option value="2">Standar 2</option>
+                      <option value="3">Standar 3</option>
+                      <option value="4">Standar 4</option>
+                      <option value="5">Standar 5</option>
+                      <option value="6">Standar 6</option>
+                      <option value="7">Standar 7</option>
+                      <option value="8">Standar 8</option>
+                      <option value="9">Standar 9</option>
                     </select>
                   </div>
                 </div> 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jenis Dokumen</label>
                   <div class="col-sm-6">                 
-                    <select class="form-control selecto" style="width: 100%;" data-placeholder="Pilih Jenis Dokumen">
+                    <select class="form-control selecto" style="width: 100%;" data-placeholder="Pilih Jenis Dokumen" name="jenis">
                       <option>Surat Keputusan</option>
-                      <option>Surat Tata Pamong</option>
-                      <option>Surat kemahasiswaan</option>
-                      <option>Surat keterangan</option>
-                      <option>Kurikulum</option>
-                      <option>Anggaran Biaya</option>
+                      <option>Pedoman</option>
+                      <option>Formulir</option>
                       <option>Surat Tugas</option>
-                      <option>Pengmas</option>
-                      <option>Capaian Luaran</option>
+                      <option>Ijazah Dosen</option>
+                      <option>Sertifikat Dosen</option>                      
                     </select>
                   </div>
-                </div><!--               
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Authorisasi</label>
+                  <div class="col-sm-6">                 
+                    <select class="form-control" style="width: 100%;" data-placeholder="Pilih Jenis Dokumen" name="authorisasi">
+                      <option class="active">Pilih</option>
+                      <option>Yayasan</option>
+                      <option>Presiden</option>
+                      <option>Rektor</option>
+                      <option disabled="disabled"><hr class="dropdown-divider"></option>
+                      <option>Rektor</option>
+                    </select>
+                  </div>
+                </div><!-- 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Belaku</label>
                   <div class="col-sm-6">                    
@@ -112,12 +134,14 @@
               </div>
               <!-- /.box-body -->
               <div class="box-footer">                
-                <a href="<?php echo base_url() ?>dashboard" class="btn btn-info btn-md">Batal</a>
+                <a href="<?php echo base_url() ?>dashboard" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"></i> Batal</a>
                 <!--<a href="<?php echo base_url() ?>dashboard/viewdocument" class="btn btn-info btn-md pull-right" type="submit">Upload</a>-->
-                <button type="submit" class="btn btn-info btn-md pull-right" value="upload">Upload</button>
+                <button type="submit" class="btn btn-info btn-md" name="btnUpload" value="Upload">Upload</button>
               </div>
               <!-- /.box-footer -->
-            </form>
+            <?php
+                echo form_close();
+              ?>
           </div>
             <!-- /.box-body -->
           </div>

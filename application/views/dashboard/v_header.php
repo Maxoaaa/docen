@@ -80,19 +80,19 @@
           <a href="<?php echo base_url() ?>dashboard">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
-        </li>
-        <li>
-          <a href="<?php echo base_url() ?>dashboard">
-            <i class="fa fa-files-o"></i> <span>Layout</span>      
-          </a>
-        </li>
+        </li>        
         <!--inisialisasi hak ases-->
         <?php
          if($buba == 'admin'){
         ?> 
         <li>
           <a href="<?php echo base_url() ?>dashboard">
-            <i class="fa fa-files-o"></i> <span>Reset Password</span>
+            <i class="fa fa-user-times"></i> <span>Reset Password</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo base_url() ?>dashboard">
+            <i class="fa fa-users"></i> <span>Users</span>
           </a>
         </li>
         <?php

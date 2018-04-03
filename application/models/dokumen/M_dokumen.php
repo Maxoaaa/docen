@@ -15,7 +15,9 @@ class M_dokumen extends CI_Model{
         $hasil = $this->db->get($this->tabel);
         return $hasil->result();
     }
-
+    public function simpanDok($data){
+        return $this->db->insert($this->tabel, $data);
+    }
 
 }
 ?>

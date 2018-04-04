@@ -18,9 +18,9 @@ class Dashboard extends CI_Controller {
     	$kue = $this->M_login->hak_ak($usan);     	    		   
 	    $array2 = array(
 	    	'query' => $query,
-		      'da' => $kue,
-		      'nama_admin'=>$usan
-	    	);
+		    'da' => $kue,
+		    'nama_admin'=>$usan
+	    );
 		$this->load->view('dashboard/v_header',$array2);
 		$this->load->view('dashboard/v_dashboard');
 		$this->load->view('dashboard/v_footer');

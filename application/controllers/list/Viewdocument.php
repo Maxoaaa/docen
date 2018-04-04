@@ -8,12 +8,12 @@ class Viewdocument extends CI_Controller {
     if($this->session->userdata('status') != "login"){
       redirect(base_url("login"));
     }   
-
+    $this->load->model("dokumen/M_dokumen");
+    $this->load->model("login/M_login");
   }
 
 	public function index($id=""){
-		$this->load->model("dokumen/M_dokumen");
-    $this->load->model("login/M_login");
+		
       $usan = $this->session->userdata('nama');
       $kue = $this->M_login->hak_ak($usan);
     //panggil fungsi listAll dari User_model

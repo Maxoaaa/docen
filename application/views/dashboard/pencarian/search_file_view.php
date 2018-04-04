@@ -2,7 +2,7 @@
     <section class="content-header">
       <h1>
         Pencarian
-        <small>Prodi Informatika</small>
+        <small>Prodi Informatika</small> 
       </h1>
       <ol class="breadcrumb">
         <li><a href="<?php echo base_url() ?>dashboard"><i class="fa fa-dashboard"></i> Home</a></li> 
@@ -22,6 +22,9 @@
               <table id="example3" class="table table-bordered table-hover">
                 <thead>
                 <tr>
+                  <th>No</th>
+                  <th>Nama Dokumen</th>
+                  <th>Jenis Dokumen</th>
                   <th>Standar 1</th>
                   <th>Standar 2</th>
                   <th>Standar 3</th>
@@ -41,9 +44,7 @@
                   <td><?php echo $no++ ?></td>
                   <td><?php echo $row->nama_dok; ?></td>
                   <td><?php echo $row->jenis_dok; ?></td>
-                  <td><?php echo $row->no_surat; ?></td>
-                  <td><?php echo $row->tgl_belaku; ?></td>
-                  <td><?php echo $row->tgl_expired; ?></td>
+                  <td><?php echo $row->no_surat; ?></td>                  
                   <td><button type="button" class="btn btn-block btn-info">Lihat</button></td>
                 </tr>                
                 <?php

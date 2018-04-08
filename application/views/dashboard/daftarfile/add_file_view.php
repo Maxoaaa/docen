@@ -1,4 +1,4 @@
-
+ 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -6,7 +6,7 @@
       <h1>
         Input atau Edit Data
         <small>Prodi Informatika</small>
-      </h1>
+      </h1> 
       <ol class="breadcrumb">
         <li><a href="<?php echo base_url() ?>dashboard"><i class="fa fa-dashboard"></i> Home</a></li> 
         <li><a href="<?php echo base_url() ?>list/viewdocument"> Detail</a></li> 
@@ -65,12 +65,13 @@
                   <label class="col-sm-2 control-label">Jenis Dokumen</label>
                   <div class="col-sm-6">                 
                     <select class="form-control selecto" style="width: 100%;" data-placeholder="Pilih Jenis Dokumen" name="jenis">
-                      <option>Surat Keputusan</option>
-                      <option>Pedoman</option>
-                      <option>Formulir</option>
-                      <option>Surat Tugas</option>
-                      <option>Ijazah Dosen</option>
-                      <option>Sertifikat Dosen</option>                      
+                      <?php
+                        foreach($query_tampil as $row){
+                      ?>  
+                      <option><?php echo $row->jenis_dokumen; ?></option>                      
+                      <?php
+                         }
+                      ?>                    
                     </select>
                   </div>
                 </div>
@@ -78,12 +79,13 @@
                   <label class="col-sm-2 control-label">Authorisasi</label>
                   <div class="col-sm-6">                 
                     <select class="form-control" style="width: 100%;" data-placeholder="Pilih Jenis Dokumen" name="authorisasi">
-                      <option class="active">Pilih</option>
-                      <option>Yayasan</option>
-                      <option>Presiden</option>
-                      <option>Rektor</option>
-                      <option disabled="disabled"><hr class="dropdown-divider"></option>
-                      <option>Rektor</option>
+                      <?php
+                        foreach($query_tampil2 as $row){
+                      ?>  
+                      <option><?php echo $row->author; ?></option>                      
+                      <?php
+                         }
+                      ?>   
                     </select>
                   </div>
                 </div><!-- 
@@ -127,7 +129,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pilih File*</label>
                   <div class="col-sm-6">
-                    <input type="file" class="form-control" name="Upload" id="exampleInputFile" required />                    
+                    <input type="file" class="form-control" name="Upload" id="exampleInputFile" accept="application/pdf" required />                    
                   </div>
                 </div>
                 

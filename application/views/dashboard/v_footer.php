@@ -43,7 +43,10 @@
       'info'        : false,
       'autoWidth'   : true,
       'columnDefs': [
-            { width: '40%', targets: 1 }
+            { width: '40%', targets: 1 },
+            { width: '30%', targets: 2 },
+            { width: '10%', targets: 4 }
+
         ],
       'fixedColumns': true     
     })          

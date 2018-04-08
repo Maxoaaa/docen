@@ -10,12 +10,18 @@
       <ol class="breadcrumb">
         <li><a href="<?php echo base_url() ?>dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
       </ol>
-    </section>
 
 <!-- Main content -->
     <section class="content">
-      <div class="row">        
-        <div class="col-xs-offset-9 col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="margin-bottom: 5px;">
+      <div class="row">  
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="margin-bottom: 5px;">
+        <a href="<?php echo base_url() ?>list/AddDocument" class="btn btn-success"><span class="glyphicon glyphicon-plus">Tambah</span></a>    
+              <!--<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>-->
+      </div>      
+        <div class="col-xs-offset-6 col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="margin-bottom: 5px;">
           <form action="<?php echo base_url('search'); ?>" method="get" class="form-group">
             <div class="input-group">
               <input type="text" name="q" class="form-control" value="" placeholder="Search..." required>
@@ -51,14 +57,118 @@
                 <tr>
                   <td><?php echo $row->standar; ?></td>
                   <td><?php echo $row->status; ?></td>
-                  <td>
-                      <div class="progress">
-                        <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                  <td> 
+                      <div class="progress pull-left" style="width: 82%;">
+                        <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="<?php 
+                        if ($row->standar == 1) {
+                          foreach($capai1 as $rowe){$rowe=$rowe->ma/100*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 2) {
+                          foreach($capai2 as $rowe){$rowe=$rowe->ma/129*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 3) {
+                          foreach($capai3 as $rowe){$rowe=$rowe->ma/10*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 4) {
+                          foreach($capai4 as $rowe){$rowe=$rowe->ma/27*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 5) {
+                          foreach($capai5 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 6) {
+                          foreach($capai6 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 7) {
+                          foreach($capai7 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 8) {
+                          foreach($capai8 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 9) {
+                          foreach($capai9 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        } 
+                   ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php 
+                        if ($row->standar == 1) {
+                          foreach($capai1 as $rowe){$rowe=$rowe->ma/100*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 2) {
+                          foreach($capai2 as $rowe){$rowe=$rowe->ma/129*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 3) {
+                          foreach($capai3 as $rowe){$rowe=$rowe->ma/10*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 4) {
+                          foreach($capai4 as $rowe){$rowe=$rowe->ma/27*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 5) {
+                          foreach($capai5 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 6) {
+                          foreach($capai6 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 7) {
+                          foreach($capai7 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 8) {
+                          foreach($capai8 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 9) {
+                          foreach($capai9 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        } 
+                   ?>%">
                         </div>
-                      </div>                      
+                      </div> 
+                      <span class="badge bg-light-blue pull-right"><?php 
+                        if ($row->standar == 1) {
+                          foreach($capai1 as $rowe){$rowe=$rowe->ma/100*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 2) {
+                          foreach($capai2 as $rowe){$rowe=$rowe->ma/129*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 3) {
+                          foreach($capai3 as $rowe){$rowe=$rowe->ma/10*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 4) {
+                          foreach($capai4 as $rowe){$rowe=$rowe->ma/27*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 5) {
+                          foreach($capai5 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 6) {
+                          foreach($capai6 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 7) {
+                          foreach($capai7 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 8) {
+                          foreach($capai8 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        }elseif ($row->standar == 9) {
+                          foreach($capai9 as $rowe){$rowe=$rowe->ma/30*100;$rowe1= number_format($rowe,2);echo $rowe1;}
+                        } 
+                   ?>%</span>                      
                   </td>
-                  <td><span class="badge bg-light-blue  ">80%</span></td>
                   <td>
+                   <?php 
+                        if ($row->standar == 1) {
+                          foreach($capai1 as $rowe){echo $rowe->ma; }
+                        }elseif ($row->standar == 2) {
+                          foreach($capai2 as $rowe){echo $rowe->ma; }
+                        }elseif ($row->standar == 3) {
+                          foreach($capai3 as $rowe){echo $rowe->ma; }
+                        }elseif ($row->standar == 4) {
+                          foreach($capai4 as $rowe){echo $rowe->ma; }
+                        }elseif ($row->standar == 5) {
+                          foreach($capai5 as $rowe){echo $rowe->ma; }
+                        }elseif ($row->standar == 6) {
+                          foreach($capai6 as $rowe){echo $rowe->ma; }
+                        }elseif ($row->standar == 7) {
+                          foreach($capai7 as $rowe){echo $rowe->ma; }
+                        }elseif ($row->standar == 8) {
+                          foreach($capai8 as $rowe){echo $rowe->ma; }
+                        }elseif ($row->standar == 9) {
+                          foreach($capai9 as $rowe){echo $rowe->ma; }
+                        }
+                   ?>/ <?php  
+                   if ($row->standar == 1) {
+                          echo 100;
+                        }elseif ($row->standar == 2) {
+                          echo 129;
+                        }elseif ($row->standar == 3) {
+                          echo 10;
+                        }elseif ($row->standar == 4) {
+                          echo 29;
+                        }elseif ($row->standar == 5) {
+                          echo 30;
+                        }elseif ($row->standar == 6) {
+                          echo 30;
+                        }elseif ($row->standar == 7) {
+                          echo 30;
+                        }elseif ($row->standar == 8) {
+                          echo 30;
+                        }elseif ($row->standar == 9) {
+                          echo 30;
+                        }?>
+                 </td>
+                  <td>
+                  <!--<td><span class="badge bg-light-blue  "><?php foreach($capai as $rowe){echo $rowe->ma;} ?>%</span></td>
+                  <td>-->
                     <a href="<?php echo base_url(); ?>list/viewdocument/index/<?php echo $row->standar; ?>" type="button" name="button" class="btn btn-primary" role="button">Detail</a> </td>
                 </tr>
                 

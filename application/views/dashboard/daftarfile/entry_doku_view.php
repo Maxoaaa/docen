@@ -5,7 +5,7 @@
         <small>Prodi Informatika</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="<?php echo base_url() ?>dashboard"><i class="fa fa-dashboard"></i> Home</a></li> 
+        <li><a href="<?php echo base_url() ?>dashboard"><i class="fa fa-dashboard"></i> Home</a></li> <li><a href="<?php echo base_url() ?>list/viewdocument/index/<?php echo $natalo; ?>"">Jenis Dokumen</a></li>
         <li class="active"> Detail</li>
       </ol>
     </section>
@@ -16,10 +16,10 @@
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" style="margin-bottom: 5px;"> 
             <div class="btn-group">
               <a href="<?php echo base_url() ?>list/AddDocument" class="btn btn-success"><span class="glyphicon glyphicon-plus">Tambah</span></a>    
-              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <!--<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
-              </button>
+              </button>-->
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<?php echo base_url() ?>list/AddDocument" class="btn btn-default"><span class="glyphicon glyphicon-edit" style="color:white align:left;">Edit</span></a></li>         
               </ul>

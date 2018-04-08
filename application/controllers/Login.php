@@ -22,10 +22,9 @@ class Login extends CI_Controller {
 			'username' => $username,
 			//'password' => md5($password) 
 			'password' => $password
-			);
+			); 
 		$cek = $this->m_login->cek_login("t_login",$where)->num_rows();
 		if($cek > 0){
- 
 			$data_session = array(
 				'nama' => $username,
 				'status' => "login",

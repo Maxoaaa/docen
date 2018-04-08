@@ -33,32 +33,62 @@
                   foreach($jumlah_dok8 as $rowa){$rowa8= $rowa->ma;}
                   foreach($jumlah_dok9 as $rowa){$rowa9= $rowa->ma;}
                   foreach($jumlah_dok10 as $rowa){$rowa10= $rowa->ma;}
-                  if (($row->jenis_dokumen == "Formulir") && ($rowa1> 0) || ($row->jenis_dokumen == "Ijazah Dosen") && ($rowa2> 0) || ($row->jenis_dokumen == "Pedoman") && ($rowa3> 0)|| ($row->jenis_dokumen == "Sertifikat") && ($rowa4> 0)|| ($row->jenis_dokumen == "SK Pendirian PS") && ($rowa5> 0)|| ($row->jenis_dokumen == "SK Presiden") && ($rowa6> 0)|| ($row->jenis_dokumen == "SK Rektor") && ($rowa7> 0)|| ($row->jenis_dokumen == "SK Yayasan Pendidikan Jaya") && ($rowa8> 0)|| ($row->jenis_dokumen == "Surat Keputusan") && ($rowa9> 0)|| ($row->jenis_dokumen == "Surat Tugas") && ($rowa10> 0)) {
+                  foreach($jumlah_dok11 as $rowa){$rowa11= $rowa->ma;}
+                  foreach($jumlah_dok12 as $rowa){$rowa12= $rowa->ma;}
+                  foreach($jumlah_dok13 as $rowa){$rowa13= $rowa->ma;}
+                  foreach($jumlah_dok14 as $rowa){$rowa14= $rowa->ma;}
+                  foreach($jumlah_dok15 as $rowa){$rowa15= $rowa->ma;}
+                  foreach($jumlah_dok16 as $rowa){$rowa16= $rowa->ma;}
+                  foreach($jumlah_dok17 as $rowa){$rowa17= $rowa->ma;}
+                  foreach($jumlah_dok18 as $rowa){$rowa18= $rowa->ma;}
+                  foreach($jumlah_dok19 as $rowa){$rowa19= $rowa->ma;}
+                  foreach($jumlah_dok20 as $rowa){$rowa20= $rowa->ma;}
+                  if ((($row->id_jenis_dokumen == 1) && ($rowa1> 0))||(($row->id_jenis_dokumen == 2) && ($rowa2> 0)) ||(($row->id_jenis_dokumen == 3) && ($rowa3> 0)) ||(($row->id_jenis_dokumen == 4) && ($rowa4> 0)) ||(($row->id_jenis_dokumen == 5) && ($rowa5> 0)) ||(($row->id_jenis_dokumen == 6) && ($rowa6> 0)) ||(($row->id_jenis_dokumen == 7) && ($rowa7> 0)) ||(($row->id_jenis_dokumen == 8) && ($rowa8> 0)) ||(($row->id_jenis_dokumen == 9) && ($rowa9> 0)) ||(($row->id_jenis_dokumen == 10) && ($rowa10> 0)) ||(($row->id_jenis_dokumen == 11) && ($rowa11> 0)) ||(($row->id_jenis_dokumen == 12) && ($rowa12> 0)) ||(($row->id_jenis_dokumen == 13) && ($rowa13> 0)) ||(($row->id_jenis_dokumen == 14) && ($rowa14> 0)) ||(($row->id_jenis_dokumen == 15) && ($rowa15> 0)) ||(($row->id_jenis_dokumen == 16) && ($rowa16> 0)) ||(($row->id_jenis_dokumen == 17) && ($rowa17> 0)) ||(($row->id_jenis_dokumen == 18) && ($rowa18> 0)) ||(($row->id_jenis_dokumen == 19) && ($rowa19> 0)) ||(($row->id_jenis_dokumen == 20) && ($rowa20> 0))  ) {
                ?>  
                   <div class="col-lg-3 col-xs-6">                  
                     <div class="small-box bg-aqua">
                       <div class="inner">
                         <h3>
-                        <?php if ($row->jenis_dokumen == "Formulir") {
+                        <?php if ($row->id_jenis_dokumen == 1) {
                                   echo $rowa1;
-                            }elseif ($row->jenis_dokumen == "Ijazah Dosen") {
+                            }elseif ($row->id_jenis_dokumen == 2) {
                                   echo $rowa2;
-                            }elseif ($row->jenis_dokumen == "Pedoman") {
+                            }elseif ($row->id_jenis_dokumen == 3) {
                                   echo $rowa3;
-                            }elseif ($row->jenis_dokumen == "Sertifikat") {
+                            }elseif ($row->id_jenis_dokumen == 4) {
                                   echo $rowa4;
-                            }elseif ($row->jenis_dokumen == "SK Pendirian PS") {
+                            }elseif ($row->id_jenis_dokumen == 5) {
                                   echo $rowa5;
-                            }elseif ($row->jenis_dokumen == "SK Presiden") {
+                            }elseif ($row->id_jenis_dokumen == 6) {
                                   echo $rowa6;
-                            }elseif ($row->jenis_dokumen == "SK Rektor") {
+                            }elseif ($row->id_jenis_dokumen == 7) {
                                   echo $rowa7;
-                            }elseif ($row->jenis_dokumen == "SK Yayasan Pendidikan Jaya") {
+                            }elseif ($row->id_jenis_dokumen == 8) {
                                   echo $rowa8;
-                            }elseif ($row->jenis_dokumen == "Surat Keputusan") {
+                            }elseif ($row->id_jenis_dokumen == 9) {
                                   echo $rowa9;
-                            }elseif ($row->jenis_dokumen == "Surat Tugas") {
+                            }elseif ($row->id_jenis_dokumen == 10) {
                                   echo $rowa10;
+                            }elseif ($row->id_jenis_dokumen == 11) {
+                                  echo $rowa11;
+                            }elseif ($row->id_jenis_dokumen == 12) {
+                                  echo $rowa12;
+                            }elseif ($row->id_jenis_dokumen == 13) {
+                                  echo $rowa13;
+                            }elseif ($row->id_jenis_dokumen == 14) {
+                                  echo $rowa14;
+                            }elseif ($row->id_jenis_dokumen == 15) {
+                                  echo $rowa15;
+                            }elseif ($row->id_jenis_dokumen == 16) {
+                                  echo $rowa16;
+                            }elseif ($row->id_jenis_dokumen == 17) {
+                                  echo $rowa17;
+                            }elseif ($row->id_jenis_dokumen == 18) {
+                                  echo $rowa18;
+                            }elseif ($row->id_jenis_dokumen == 19) {
+                                  echo $rowa19;
+                            }elseif ($row->id_jenis_dokumen == 20) {
+                                  echo $rowa20;
                             } 
                         ?>                          
                         </h3>

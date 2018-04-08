@@ -17,16 +17,26 @@ class Viewdocument extends CI_Controller {
       $usan = $this->session->userdata('nama');
       $kue = $this->M_login->hak_ak($usan);
       $jenis_dokumen = $this->M_dokumen->list_jns_dok();      
-        $total_dok1 = $this->M_dokumen->total_dok($id,'Formulir');
-        $total_dok2 = $this->M_dokumen->total_dok($id,'Ijazah Dosen');
-        $total_dok3 = $this->M_dokumen->total_dok($id,'Pedoman');
-        $total_dok4 = $this->M_dokumen->total_dok($id,'Sertifikat');
-        $total_dok5 = $this->M_dokumen->total_dok($id,'SK Pendirian PS');
-        $total_dok6 = $this->M_dokumen->total_dok($id,'SK Presiden');
-        $total_dok7 = $this->M_dokumen->total_dok($id,'SK Rektor');
-        $total_dok8 = $this->M_dokumen->total_dok($id,'SK Yayasan Pendidikan Jaya');
-        $total_dok9 = $this->M_dokumen->total_dok($id,'Surat Keputusan');
-        $total_dok10 = $this->M_dokumen->total_dok($id,'Surat Tugas');
+        $total_dok1 = $this->M_dokumen->total_dokb($id,1);
+        $total_dok2 = $this->M_dokumen->total_dokb($id,2);
+        $total_dok3 = $this->M_dokumen->total_dokb($id,3);
+        $total_dok4 = $this->M_dokumen->total_dokb($id,4);
+        $total_dok5 = $this->M_dokumen->total_dokb($id,5);
+        $total_dok6 = $this->M_dokumen->total_dokb($id,6);
+        $total_dok7 = $this->M_dokumen->total_dokb($id,7);
+        $total_dok8 = $this->M_dokumen->total_dokb($id,8);
+        $total_dok9 = $this->M_dokumen->total_dokb($id,9);
+        $total_dok10 = $this->M_dokumen->total_dokb($id,10);
+        $total_dok11 = $this->M_dokumen->total_dokb($id,11);
+        $total_dok12 = $this->M_dokumen->total_dokb($id,12);
+        $total_dok13 = $this->M_dokumen->total_dokb($id,13);
+        $total_dok14 = $this->M_dokumen->total_dokb($id,14);
+        $total_dok15 = $this->M_dokumen->total_dokb($id,15);
+        $total_dok16 = $this->M_dokumen->total_dokb($id,16);
+        $total_dok17 = $this->M_dokumen->total_dokb($id,17);
+        $total_dok18 = $this->M_dokumen->total_dokb($id,18);
+        $total_dok19 = $this->M_dokumen->total_dokb($id,19);
+        $total_dok20 = $this->M_dokumen->total_dokb($id,20);
         $query = $this->M_dokumen->listDetail($id); //untuk menampilkan data pada entry_doku_view
         //$judul_standar['natalo']= $id;  
         $judul_standar = array(
@@ -46,7 +56,17 @@ class Viewdocument extends CI_Controller {
           'jumlah_dok7'=>$total_dok7,
           'jumlah_dok8'=>$total_dok8,
           'jumlah_dok9'=>$total_dok9,
-          'jumlah_dok10'=>$total_dok10
+          'jumlah_dok10'=>$total_dok10,
+          'jumlah_dok11'=>$total_dok11,
+          'jumlah_dok12'=>$total_dok12,
+          'jumlah_dok13'=>$total_dok13,
+          'jumlah_dok14'=>$total_dok14,
+          'jumlah_dok15'=>$total_dok15,
+          'jumlah_dok16'=>$total_dok16,
+          'jumlah_dok17'=>$total_dok17,
+          'jumlah_dok18'=>$total_dok18,
+          'jumlah_dok19'=>$total_dok19,
+          'jumlah_dok20'=>$total_dok20
         );
               
    	$this->load->view('dashboard/v_header',$dataHalaman); 

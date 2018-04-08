@@ -12,14 +12,14 @@ class M_dokumen extends CI_Model{
         $query = $this->db->query('SELECT COUNT(*) AS ma FROM dokumen WHERE standar='.$plus);
         return $query->result();
     } 
-    function total_doka($id,$jenis_dokumen){
-        $query = $this->db->query('SELECT COUNT(*) AS ma FROM dokumen INNER JOIN jenis_dokumen ON dokumen.jenis_dok=jenis_dokumen.jenis_dokumen WHERE standar='.$id.' and jenis_dok="'.$jenis_dokumen.'"');
-        return $query->result();
-    }
     function total_dok($id,$jenis_dokumen){
         $query = $this->db->query('SELECT COUNT(*) AS ma FROM dokumen WHERE standar='.$id.' and jenis_dok="'.$jenis_dokumen.'"');
         return $query->result();
     } 
+    function total_dokb($id,$jenis_dokumen){
+        $query = $this->db->query('SELECT COUNT(*) AS ma FROM dokumen INNER JOIN jenis_dokumen ON dokumen.jenis_dok=jenis_dokumen.jenis_dokumen WHERE standar='.$id.' and id_jenis_dokumen="'.$jenis_dokumen.'"');
+        return $query->result();
+    }
     function listDetail($where){
         $this->load->helper('security');
         $clean_id=xss_clean($where);
@@ -31,7 +31,8 @@ class M_dokumen extends CI_Model{
         return $this->db->insert($this->tabel, $data);
     } 
     function list_jns_dok(){
-        $query = $this->db->get($this->tabel_jenis);
+        //$query = $this->db->get($this->tabel_jenis);
+        $query = $this->db->query('SELECT * FROM jenis_dokumen ORDER BY id_jenis_dokumen ASC ');
         return $query->result();
     }
     function list_author_dok(){

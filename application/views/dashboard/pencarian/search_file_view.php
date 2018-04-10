@@ -44,17 +44,43 @@
                   <td><?php echo $no++ ?></td>
                   <td><?php echo $row->nama_dok; ?></td>
                   <td><?php echo $row->jenis_dok; ?></td>
-                  <td>
-                    
-                    <input type="checkbox" class="minimal" checked ></td>
-                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
-                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
-                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
-                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
-                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
-                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
-                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
-                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>                  
+                  <td><?php if ($row->standar == '1'){
+                    echo '<input type="checkbox" class="minimal" checked>';
+                    }else{echo '<input type="checkbox" class="minimal" disabled>';}
+                    ?></td>
+                  <td><?php if ($row->standar == '2'){
+                    echo '<input type="checkbox" class="minimal" checked>';
+                    }else{echo '<input type="checkbox" class="minimal" disabled>';}
+                    ?></td>
+                  <td><?php if ($row->standar == '3'){
+                    echo '<input type="checkbox" class="minimal" checked>';
+                    }else{echo '<input type="checkbox" class="minimal" disabled>';}
+                    ?></td>
+                  <td><?php if ($row->standar == '4'){
+                    echo '<input type="checkbox" class="minimal" checked>';
+                    }else{echo '<input type="checkbox" class="minimal" disabled>';}
+                    ?></td>
+                  <td><?php if ($row->standar == '5'){
+                    echo '<input type="checkbox" class="minimal" checked>';
+                    }else{echo '<input type="checkbox" class="minimal" disabled>';}
+                    ?></td>
+                  <td><?php if ($row->standar == '6'){
+                    echo '<input type="checkbox" class="minimal" checked>';
+                    }else{echo '<input type="checkbox" class="minimal" disabled>';}
+                    ?></td>
+                  <td><?php if ($row->standar == '7'){
+                    echo '<input type="checkbox" class="minimal" checked>';
+                    }else{echo '<input type="checkbox" class="minimal" disabled>';}
+                    ?></td>
+                  <td><?php if ($row->standar == '8'){
+                    echo '<input type="checkbox" class="minimal" checked>';
+                    }else{echo '<input type="checkbox" class="minimal" disabled>';}
+                    ?></td>
+                  <td><?php if ($row->standar == '9'){
+                    echo '<input type="checkbox" class="minimal" checked>';
+                    }else{echo '<input type="checkbox" class="minimal" disabled>';}
+                    ?></td>
+
                 </tr>                
                 <?php
                  }

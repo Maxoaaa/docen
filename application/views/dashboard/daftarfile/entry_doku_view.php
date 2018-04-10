@@ -52,7 +52,10 @@
                   <td><?php echo $row->nama_dok; ?></td>
                   <td><?php echo $row->jenis_dok; ?></td>
                   <td><?php echo $row->author; ?></td>                                      
-                  <td><button type="button" class="btn btn-block btn-info">Lihat</button></td>                  
+                  <td>
+                    <div style="margin: 0 5px; float: left;"><button type="button" class="btn btn-block btn-info">Lihat</button></div>
+                    <div style="margin: 0 5px; float: left;"><button type="button" class="btn btn-block btn-info">Unduh</button></div>                  
+                  </td>                  
                 </tr>
                 
 

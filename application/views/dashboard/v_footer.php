@@ -29,10 +29,16 @@
   $(document).ready(function () {
     $('.sidebar-menu').tree()
   })
+  $(document).ready(function() {
+    $('.hapus').click(function() {
+    return confirm("Are you sure you want to delete?");
+    })
+  })
   $(function () {
     $('#example3').DataTable({
       'searching'   : false
     })
+    $('#example4_search').DataTable()
     $('#example2').DataTable({
       'paging'      : false,
       'lengthChange': true,

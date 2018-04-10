@@ -18,34 +18,43 @@
         <div class="col-xs-12">
           <div class="box">            
             <div class="box-body">
-                                          
-              <table id="example3" class="table table-bordered table-hover">
+  
+              <table id="example4_search" class="table table-bordered table-hover">
                 <thead>
                 <tr>
                   <th>No</th>
                   <th>Nama Dokumen</th>
                   <th>Jenis Dokumen</th>
-                  <th>Standar 1</th>
-                  <th>Standar 2</th>
-                  <th>Standar 3</th>
-                  <th>Standar 4</th>
-                  <th>Standar 5</th>
-                  <th>Standar 6</th>
-                  <th>Standar 7</th>
-                  <th>Standar 8</th>
-                  <th>Standar 9</th>
+                  <th>Std 1</th>
+                  <th>Std 2</th>
+                  <th>Std 3</th>
+                  <th>Std 4</th>
+                  <th>Std 5</th>
+                  <th>Std 6</th>
+                  <th>Std 7</th>
+                  <th>Std 8</th>
+                  <th>Std 9</th>
                 </tr>
                 </thead>
                 <tbody> 
-                <?php  $no = 1;                        
-                  foreach($query as $row){
-                ?>            
-                <tr>                  
+                <?php  $no = 1;
+                  foreach($list_pencarian as $row){
+                ?>
+                <tr>
                   <td><?php echo $no++ ?></td>
                   <td><?php echo $row->nama_dok; ?></td>
                   <td><?php echo $row->jenis_dok; ?></td>
-                  <td><?php echo $row->no_surat; ?></td>                  
-                  <td><button type="button" class="btn btn-block btn-info">Lihat</button></td>
+                  <td>
+                    
+                    <input type="checkbox" class="minimal" checked ></td>
+                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
+                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
+                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
+                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
+                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
+                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
+                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>
+                  <td><input type="checkbox" class="minimal" <?php if($ceklis){echo 'checked';} ?> disabled ></td>                  
                 </tr>                
                 <?php
                  }

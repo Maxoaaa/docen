@@ -2,18 +2,17 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
-
+ 
 	function __construct(){
 		parent::__construct();
 		//$this->load->model('login/m_login');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("login"));
-		}	 
+		}
 		$this->load->model("login/M_login");
 		$this->load->model("dokumen/M_dokumen");
 	}
-	public function index()
-	{
+	public function index(){
 		$badgeku = $this->input->post('badgeku', TRUE);
     	$query = $this->M_login->listBorang(); 
     	$usan = $this->session->userdata('nama') ;

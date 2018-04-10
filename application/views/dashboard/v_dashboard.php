@@ -22,11 +22,11 @@
               </button>-->
       </div>      
         <div class="col-xs-offset-6 col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="margin-bottom: 5px;">
-          <form action="<?php echo base_url('search'); ?>" method="get" class="form-group">
+          <form action="<?php echo base_url();?>search" method="get" class="form-group"> 
             <div class="input-group">
               <input type="text" name="q" class="form-control" value="" placeholder="Search..." required>
                   <span class="input-group-btn">
-                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                    <button type="submit" name="cari" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                     </button>
                   </span>
             </div>

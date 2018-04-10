@@ -11,16 +11,19 @@ class Search extends CI_Controller {
 			redirect(base_url("login"));
 		}
 	} 
-	public function index($id="")
+	public function index() 
 	{
+		$_cari = $this->input->get('q', TRUE);
 		$usan = $this->session->userdata('nama');
-      $kue = $this->M_login->hak_ak($usan);
-    //panggil fungsi listAll dari User_model
-        $query = $this->M_dokumen->listDetail($id);     
+		$kue = $this->M_login->hak_ak($usan);
+    	//panggil fungsi listAll dari User_model
+        $query = $this->M_dokumen->list_search($_cari);
+        $query_ceklis = $this->M_dokumen->get_Standar($_cari);
         //$judul_standar['natalo']= $id;  
         
         $dataHalaman = array( 
-          'query' => $query,
+          'list_pencarian' => $query,
+          'ceklis'=>$query_ceklis,
           'da' => $kue,
           'nama_admin'=>$usan
         );

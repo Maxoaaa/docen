@@ -6,7 +6,7 @@ class M_dokumen extends CI_Model{
   var $tabel_author= 'author'; 
   //terletak di dashboard index
     public function listAll(){
-        return $this->db->get($this->tabel);        
+        return $this->db->get($this->tabel);
     } 
     function progress_bar($plus){
         $query = $this->db->query('SELECT COUNT(*) AS ma FROM dokumen WHERE standar='.$plus);
@@ -15,7 +15,7 @@ class M_dokumen extends CI_Model{
     function total_dok($id,$jenis_dokumen){
         $query = $this->db->query('SELECT COUNT(*) AS ma FROM dokumen WHERE standar='.$id.' and jenis_dok="'.$jenis_dokumen.'"');
         return $query->result();
-    } 
+    }
     function total_dokb($id,$jenis_dokumen){
         $query = $this->db->query('SELECT COUNT(*) AS ma FROM dokumen INNER JOIN jenis_dokumen ON dokumen.jenis_dok=jenis_dokumen.jenis_dokumen WHERE standar='.$id.' and id_jenis_dokumen="'.$jenis_dokumen.'"');
         return $query->result();
@@ -24,14 +24,13 @@ class M_dokumen extends CI_Model{
         $this->load->helper('security');
         $clean_id=xss_clean($where);
 
-        $hasil =$this->db->get_where($this->tabel,$clean_id);        
+        $hasil =$this->db->get_where($this->tabel,$clean_id);
         return $hasil->result();
     }
     public function simpanDok($data){
         return $this->db->insert($this->tabel, $data);
     } 
-    function list_jns_dok(){
-        //$query = $this->db->get($this->tabel_jenis);
+    function list_jns_dok(){        
         $query = $this->db->query('SELECT * FROM jenis_dokumen ORDER BY id_jenis_dokumen ASC ');
         return $query->result();
     }
@@ -39,6 +38,23 @@ class M_dokumen extends CI_Model{
         $query = $this->db->get($this->tabel_author);
         return $query->result();
     }  
+
+    //function modeluntuk mencari data pada halaman search
+    function list_search($cari){       
+        $this->db->like('jenis_dok', $cari, 'both');
+        $query= $this->db->get($this->tabel);       
+        return $query->result();
+    }
+    //function berikut untuk ceklis pada halaman search
+    /*function get_standar(){
+        $query = $this->db->query('SELECT standar FROM dokumen');
+        return $query->result();   
+    }*/
+    function get_standar($cari){       
+        $this->db->like('jenis_dok', $cari, 'both');
+        $query= $this->db->get($this->tabel);       
+        return $query->result();
+    }
 
 }
 ?>

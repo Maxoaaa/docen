@@ -14,7 +14,7 @@
 </head>
 
 <body class="hold-transition login-page" style="height: auto;">
-<div class="login-box">
+<div class="login-box" style="margin-top: 50px;">
   <div class="login-logo">
     <a href="<?php echo base_url() ?>"><b>Document </b>Repository</a>
   </div>

@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="<?php echo base_url() ?>asett/plugins/iCheck/all.css">
   <link rel="stylesheet" href="<?php echo base_url() ?>asett/plugins/timepicker/bootstrap-timepicker.min.css">
   <link rel="stylesheet" href="<?php echo base_url() ?>asett/bower_components/select2/dist/css/select2.min.css">  
+  <link rel="stylesheet" href="<?php echo base_url() ?>asett/dist/js/jquery-ui.css">  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini sidebar-collapse fixed"><?php foreach($da as $row){$buba= $row->author; }  ?>

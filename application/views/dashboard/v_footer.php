@@ -14,6 +14,7 @@
   </aside>  
 <!-- ./wrapper -->
 
+<script src="<?php echo base_url() ?>asett/dist/js/jqueryku.js"></script>
 <script src="<?php echo base_url() ?>asett/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="<?php echo base_url() ?>asett/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url() ?>asett/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -25,6 +26,7 @@
 <script src="<?php echo base_url() ?>asett/plugins/iCheck/icheck.min.js"></script>
 <script src="<?php echo base_url() ?>asett/dist/js/adminlte.min.js"></script>
 <script src="<?php echo base_url() ?>asett/dist/js/demo.js"></script>
+<script src="<?php echo base_url() ?>asett/dist/js/jquery-ui.js"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
@@ -66,7 +68,22 @@
     $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
       checkboxClass: 'icheckbox_minimal-blue',
       radioClass   : 'iradio_minimal-blue'
+    })   
+    $(document).ready(function(){
+      $("#kode").autocomplete({
+        minLength:2,
+        source:'get_product.php',
+        select:function(event, ui){
+          $('#nama-produk').html(ui.item.nama);
+        }
+      })
     })
+    $(document).ready(function(){
+      $("#title").autocomplete({
+          minLength:2,
+          source: "<?php echo base_url('dashboard/get_autocomplete/?');?>"
+      });
+    });
 </script>
  
 </body>

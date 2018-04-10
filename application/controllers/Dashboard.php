@@ -47,5 +47,15 @@ class Dashboard extends CI_Controller {
 		$this->load->view('dashboard/v_dashboard');
 		$this->load->view('dashboard/v_footer');
 	}
+	function get_autocomplete(){
+        if (isset($_GET['term'])) {
+            $result = $this->M_dokumen->search_blog($_GET['term']);
+            if (count($result) > 0) {
+            foreach ($result as $row)
+                $arr_result[] = $row->jenis_dok;
+                echo json_encode($arr_result);
+            }
+        }
+    }
 
 }

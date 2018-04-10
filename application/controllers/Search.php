@@ -18,7 +18,7 @@ class Search extends CI_Controller {
 		$kue = $this->M_login->hak_ak($usan);
     	//panggil fungsi listAll dari User_model
         $query = $this->M_dokumen->list_search($_cari);
-        $query_ceklis = $this->M_dokumen->get_Standar($_cari);
+        $query_ceklis = $this->M_dokumen->list_search($_cari);
         //$judul_standar['natalo']= $id;  
         
         $dataHalaman = array( 
@@ -31,5 +31,6 @@ class Search extends CI_Controller {
 		$this->load->view('dashboard/pencarian/search_file_view');
 		$this->load->view('dashboard/v_footer');
 	}
+	
 
 }

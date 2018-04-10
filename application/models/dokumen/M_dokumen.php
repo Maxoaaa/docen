@@ -45,16 +45,11 @@ class M_dokumen extends CI_Model{
         $query= $this->db->get($this->tabel);       
         return $query->result();
     }
-    //function berikut untuk ceklis pada halaman search
-    /*function get_standar(){
-        $query = $this->db->query('SELECT standar FROM dokumen');
-        return $query->result();   
-    }*/
-    function get_standar($cari){       
-        $this->db->like('jenis_dok', $cari, 'both');
-        $query= $this->db->get($this->tabel);       
-        return $query->result();
-    }
-
+    function search_blog($title){
+        $this->db->like('jenis_dok', $title , 'both');
+        $this->db->order_by('jenis_dok', 'ASC');
+        $this->db->limit(5);
+        return $this->db->get('dokumen')->result();
+    }    
 }
 ?>

@@ -27,6 +27,7 @@ class M_dokumen extends CI_Model{
         $hasil =$this->db->get_where($this->tabel,$clean_id);
         return $hasil->result();
     }
+    //simpanDok untuk menyimpan dokumen pada halaman tambah data
     public function simpanDok($data){
         return $this->db->insert($this->tabel, $data);
     } 

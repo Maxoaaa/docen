@@ -23,6 +23,7 @@
     <p class="login-box-msg"><img src="<?php echo base_url() ?>asett/dist/img/pict/logo_upj.png"></p>
 
     <form action="<?php echo base_url('login/aksi_login'); ?>" method="post">
+      <p style="color:red;text-align:center;"><?php echo $this->session->flashdata('notification')?></p>
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Username / Email" name="username" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

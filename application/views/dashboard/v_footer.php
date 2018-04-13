@@ -70,15 +70,6 @@
       radioClass   : 'iradio_minimal-blue'
     })   
     $(document).ready(function(){
-      $("#kode").autocomplete({
-        minLength:2,
-        source:'get_product.php',
-        select:function(event, ui){
-          $('#nama-produk').html(ui.item.nama);
-        }
-      })
-    })
-    $(document).ready(function(){
       $("#title").autocomplete({
           minLength:2,
           source: "<?php echo base_url('dashboard/get_autocomplete/?');?>"

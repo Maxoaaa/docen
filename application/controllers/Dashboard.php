@@ -12,9 +12,8 @@ class Dashboard extends CI_Controller {
 		$this->load->model("login/M_login");
 		$this->load->model("dokumen/M_dokumen");
 	}
-	public function index(){
-		$badgeku = $this->input->post('badgeku', TRUE);
-    	$query = $this->M_login->listBorang(); 
+	public function index(){		
+    	$query = $this->M_login->listBorang(); //query menampilkan tabel_kelengkapan data
     	$usan = $this->session->userdata('nama') ;
     	$kue = $this->M_login->hak_ak($usan);     	        		    	
 	    $pencapaian1=$this->M_dokumen->progress_bar(1); 

@@ -13,7 +13,7 @@ class AddDocument extends CI_Controller {
     }
     
 	public function index()
-	{	
+	{
       $usan = $this->session->userdata('nama');
       $kue = $this->M_login->hak_ak($usan);
       $jenisDOK = $this->M_dokumen->list_jns_dok();

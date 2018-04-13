@@ -43,13 +43,21 @@ class M_dokumen extends CI_Model{
     //function modeluntuk mencari data pada halaman search
     function list_search($cari){       
         $this->db->like('jenis_dok', $cari, 'both');
+        $this->db->or_like('nama_dok', $cari, 'both');
+        $this->db->or_like('no_surat', $cari, 'both');
+        $this->db->or_like('author', $cari, 'both');
+        $this->db->or_like('standar', $cari, 'both');
         $query= $this->db->get($this->tabel);       
         return $query->result();
     }
     function search_blog($title){
-        $this->db->like('jenis_dok', $title , 'both');
+        $this->db->like('nama_dok', $title, 'both');
+        $this->db->or_like('jenis_dok', $title , 'both');
+        $this->db->or_like('no_surat', $title, 'both');
+        $this->db->or_like('author', $title, 'both');
+        $this->db->or_like('standar', $title, 'both');
         $this->db->order_by('jenis_dok', 'ASC');
-        $this->db->limit(5);
+        $this->db->limit(15);
         return $this->db->get('dokumen')->result();
     }    
 }

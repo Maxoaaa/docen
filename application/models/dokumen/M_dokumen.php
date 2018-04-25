@@ -60,5 +60,10 @@ class M_dokumen extends CI_Model{
         $this->db->limit(15);
         return $this->db->get('dokumen')->result();
     }    
+    function unduh_pdf(){
+        //$query=$this->db->query('SELECT file from dokumen where dokumen_id=144');
+        $query=$this->db->query('SELECT file from dokumen');
+        return $query->result();
+    }
 }
 ?>

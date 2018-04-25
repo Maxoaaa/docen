@@ -34,6 +34,7 @@
                   <th>Std 7</th>
                   <th>Std 8</th>
                   <th>Std 9</th>
+                  <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody> 
@@ -80,6 +81,7 @@
                     echo '<input type="checkbox" class="minimal" checked>';
                     }else{echo '<input type="checkbox" class="minimal" disabled>';}
                     ?></td>
+                  <td><a href="#" type="button" name="button" class="btn btn-primary" role="button">Lihat</a></td>
 
                 </tr>                
                 <?php

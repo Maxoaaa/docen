@@ -4,22 +4,17 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Document Information<?php foreach($da as $row){$buba= $row->author; } ?>
+        Document Information<?php foreach($da as $row){$buba= $row->author; } ?>        
         <small>Prodi Informatika</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="<?php echo base_url() ?>dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
       </ol>
 
-<!-- Main content -->
     <section class="content">
       <div class="row">  
       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="margin-bottom: 5px;">
-        <a href="<?php echo base_url() ?>list/AddDocument" class="btn btn-success"><span class="glyphicon glyphicon-plus">Tambah</span></a>    
-              <!--<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>-->
+        <a href="<?php echo base_url() ?>list/AddDocument" class="btn btn-success"><span class="glyphicon glyphicon-plus">Tambah</span></a>                  
       </div>      
         <div class="col-xs-offset-6 col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="margin-bottom: 5px;">
           <form action="<?php echo base_url();?>search" method="get" class="form-group"> 
@@ -48,7 +43,7 @@
                   <th>Pencapaian</th>
                   <th>label</th>
                   <th>Aksi</th>
-                </tr>
+                </tr> 
                 </thead>
                 <tbody>  
                 <?php

@@ -4,9 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Search extends CI_Controller {
 
 	function __construct(){
-		parent::__construct(); 
-		$this->load->model("login/M_login");
-		$this->load->model("dokumen/M_dokumen");
+		parent::__construct(); 		
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("login"));
 		}
@@ -25,7 +23,7 @@ class Search extends CI_Controller {
           'list_pencarian' => $query,
           'ceklis'=>$query_ceklis,
           'da' => $kue,
-          'nama_admin'=>$usan
+          //'nama_admin'=>$usan
         );
 		$this->load->view('dashboard/v_header',$dataHalaman);
 		$this->load->view('dashboard/pencarian/search_file_view');

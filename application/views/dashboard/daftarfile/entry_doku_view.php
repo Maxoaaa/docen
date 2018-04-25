@@ -31,7 +31,7 @@
             <div class="box-body">
                                           
               <table id="example3" class="table table-bordered table-hover">
-                <thead>
+                <thead> 
                 <tr>
                   <th>No.</th>
                   <th>No. Surat</th>
@@ -53,8 +53,13 @@
                   <td><?php echo $row->jenis_dok; ?></td>
                   <td><?php echo $row->author; ?></td>                                      
                   <td>
-                    <div style="margin: 0 5px; float: left;"><button type="button" class="btn btn-block btn-info">Lihat</button></div>
-                    <div style="margin: 0 5px; float: left;"><button type="button" class="btn btn-block btn-info">Unduh</button></div>                  
+                    <div style="margin: 0 5px; float: left;">
+                      <button type="button" class="btn btn-block btn-info" data-toggle="modal" data-target="#modal-default<?php echo $row->dokumen_id;?>">
+                        Lihat
+                      </button>
+                    </div> 
+                    <div style="margin: 0 5px; float: left;"><a href="<?php echo base_url().'fileupload/'.$row->file  ?>"><button type="button" class="btn btn-block btn-info">Unduh</button></a></div>                      
+                                     
                   </td>                  
                 </tr>
                 
@@ -74,3 +79,36 @@
 
   </div>
   <!-- /.content-wrapper -->
+                  <?php
+                       foreach ($query as $rou) {
+                           
+                 ?>
+        <div class="modal fade" id="modal-default<?php echo $rou->dokumen_id;?>">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Lihat File</h4>
+              </div>
+              <div class="modal-body">
+                
+                <!--<embed data="<?php echo base_url() ?>fileupload/1.pdf" type="application/pdf" width="500" height="500"></embed>
+                <object data="<?php echo base_url() ?>fileupload/1.pdf" type="application/pdf">
+                    <embed src="<?php echo base_url() ?>fileupload/1.pdf" type="application/pdf" />
+                </object>-->
+                <img class="img-thumbnail" src="<?php echo base_url().'fileupload/'.$rou->file  ?>"/>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary">Unduh</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+              <?php
+                }
+              ?>

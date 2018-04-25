@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="<?php echo base_url() ?>asett/dist/js/jquery-ui.css">  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini sidebar-collapse fixed"><?php foreach($da as $row){$buba= $row->author; }  ?>
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse fixed"><?php foreach($da as $row){$buba= $row->author;$bubi= $row->username; }  ?>
 <!-- Site wrapper -->
 <div class="wrapper">
 
@@ -42,13 +42,13 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?php echo base_url() ?>asett/dist/img/avatar04.png" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo  $nama_admin ?></span>
+              <span class="hidden-xs"><?php echo  $bubi; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
                 <img src="<?php echo base_url() ?>asett/dist/img/avatar04.png" class="img-circle" alt="User Image">
-                <p><?php echo  $nama_admin ?></p>
+                <p><?php echo  $bubi; ?></p>
               </li>
  
               <!-- Menu Footer-->
@@ -86,13 +86,13 @@
         <?php
          if($buba == 'admin'){
         ?> 
-        <li>
+        <!--<li>
           <a href="<?php echo base_url() ?>dashboard">
             <i class="fa fa-user-times"></i> <span>Reset Login Pengguna</span>
           </a>
-        </li>
+        </li>-->
         <li>
-          <a href="<?php echo base_url() ?>dashboard">
+          <a href="<?php echo base_url() ?>pengguna/users">
             <i class="fa fa-users"></i> <span>Users</span>
           </a>
         </li>

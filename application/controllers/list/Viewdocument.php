@@ -7,9 +7,7 @@ class ViewDocument extends CI_Controller {
     parent::__construct();      
     if($this->session->userdata('status') != "login"){
       redirect(base_url("login"));
-    }   
-    $this->load->model("dokumen/M_dokumen");
-    $this->load->model("login/M_login");
+    }      
   }
 
 	public function index($id=""){ 
@@ -45,7 +43,7 @@ class ViewDocument extends CI_Controller {
         $dataHalaman = array( 
           'query' => $query,
           'da' => $kue,
-          'nama_admin'=>$usan,
+          //'nama_admin'=>$usan,
           'query_tampil2' => $jenis_dokumen,
           'jumlah_dok1'=>$total_dok1,
           'jumlah_dok2'=>$total_dok2,
@@ -92,7 +90,7 @@ class ViewDocument extends CI_Controller {
         $dataHalaman = array( 
           'query' => $query,
           'da' => $kue,
-          'nama_admin'=>$usan,
+          //'nama_admin'=>$usan,
          // 'cek_data' => $cek
         );
         

@@ -1,3 +1,4 @@
+  
  <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.1
@@ -38,7 +39,12 @@
   })
   $(function () {
     $('#example3').DataTable({
-      'searching'   : false
+      'searching'   : false,
+      'autoWidth'   : true,
+      'fixedColumns': true,
+      'lengthChange': true,
+      'scrollY'     : true,
+      'scrollCollapse': true
     })
     $('#example4_search').DataTable()
     $('#example2').DataTable({
@@ -57,6 +63,17 @@
 
         ],
       'fixedColumns': true     
+    }) 
+     $('#exampleuser').DataTable({
+      'paging'      : false,
+      'lengthChange': true,
+      'scrollY'     : true,
+      'scrollCollapse': true,
+      'searching'   : false,
+      'ordering'    : false,
+      'info'        : false,
+      'autoWidth'   : true,      
+      'fixedColumns': true     
     })          
   })
     $('.selecto').select2()
@@ -71,7 +88,7 @@
     })   
     $(document).ready(function(){
       $("#title").autocomplete({
-          minLength:2,
+          minLength:1,
           source: "<?php echo base_url('dashboard/get_autocomplete/?');?>"
       });
     });

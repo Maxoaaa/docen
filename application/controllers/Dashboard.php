@@ -2,19 +2,17 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
- 
+
 	function __construct(){
 		parent::__construct();
 		//$this->load->model('login/m_login');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("login"));
-		}
-		$this->load->model("login/M_login");
-		$this->load->model("dokumen/M_dokumen");
+		}		
 	}
 	public function index(){		
     	$query = $this->M_login->listBorang(); //query menampilkan tabel_kelengkapan data
-    	$usan = $this->session->userdata('nama') ;
+    	$usan = $this->session->userdata('nama') ;    	
     	$kue = $this->M_login->hak_ak($usan);     	        		    	
 	    $pencapaian1=$this->M_dokumen->progress_bar(1); 
 	    $pencapaian2=$this->M_dokumen->progress_bar(2); 	    
@@ -29,8 +27,8 @@ class Dashboard extends CI_Controller {
 	    $array2 = array(
 	    	'query' => $query,
 		    'da' => $kue,
-		    'nama_admin'=>$usan,
-		    'capai1'=>$pencapaian1,
+		    //'nama_admin'=>$usan,//untuk memanggil nama pengakses ke header sebelah pojok kanan atas
+		    'capai1'=>$pencapaian1,//untuk melihat tabel progress pada dashboard
 		    'capai2'=>$pencapaian2,		    
 		    'capai3'=>$pencapaian3,
 		    'capai4'=>$pencapaian4,
@@ -38,15 +36,14 @@ class Dashboard extends CI_Controller {
 		    'capai6'=>$pencapaian6,
 		    'capai7'=>$pencapaian7,
 		    'capai8'=>$pencapaian8,
-		    'capai9'=>$pencapaian9,
-		    'pai1'=>7
+		    'capai9'=>$pencapaian9,		    
 	    ); 
-	     
+
 		$this->load->view('dashboard/v_header',$array2);
 		$this->load->view('dashboard/v_dashboard');
 		$this->load->view('dashboard/v_footer');
 	}
-	function get_autocomplete(){
+	function get_autocomplete(){//fungsi untuk membuat autocomplete pada menu search
         if (isset($_GET['term'])) {
             $result = $this->M_dokumen->search_blog($_GET['term']);
             if (count($result) > 0) {
@@ -56,5 +53,13 @@ class Dashboard extends CI_Controller {
             }
         }
     }
+    public function daftarpdf()
+    {
+    	$query2 = $this->M_dokumen->unduh_pdf(); 
+    	$query['capai']=$this->db->query('select file from dokumen where dokumen_id=144');
+    	$this->load->view('dashboard/daftarfile/tampilpdf',$query);
+    	//redirect(base_url("upload/1.pdf"));
+    }
+    
 
 }

@@ -7,9 +7,7 @@ class AddDocument extends CI_Controller {
     parent::__construct();      
     	if($this->session->userdata('status') != "login"){
       		redirect(base_url("login"));
-    	}   
-  	 $this->load->model("login/M_login");
-      $this->load->model("dokumen/M_dokumen");
+    	}  	 
     }
     
 	public function index()
@@ -20,7 +18,7 @@ class AddDocument extends CI_Controller {
       $authorisasi = $this->M_dokumen->list_author_dok(); 
         $data_profil = array(           
           'da' => $kue,
-          'nama_admin'=>$usan,
+          //'nama_admin'=>$usan,
           'query_tampil' => $jenisDOK,
           'query_tampil2' => $authorisasi
         );          
@@ -29,21 +27,28 @@ class AddDocument extends CI_Controller {
 		$this->load->view('dashboard/v_footer');
 	}
     public function savedok()
-    {      
+    {     
+
       if($this->input->post('btnUpload') == "Upload"){
+              $config['upload_path'] = './fileupload/';
+              $config['allowed_types'] = 'pdf';
+              $this->load->library('upload', $config);                
+                        if ( ! $this->upload->do_upload('filepdf'))
+                        {
+                                $error = array('error' => $this->upload->display_errors());
+
+                                //$this->load->view('upload_form', $error);
+                        }
+                        else
+                        {
+                                $data = array('upload_data' => $this->upload->data());                              
+                        }
             $_no_dok = $this->input->post('no_surat', TRUE);
             $_nama_dok = $this->input->post('nama_surat', TRUE);
             $_kel_dok = $this->input->post('kelompok', TRUE);
             $_jenis_dok = $this->input->post('jenis', TRUE);
-            $_authorisasi = $this->input->post('authorisasi', TRUE);
-            $_upload = $this->input->post('Upload', TRUE);
-
-            $this->load->model('dokumen/M_dokumen');
-                //kumpulkan sesuai inputan kedalam array
-            //$data = array();
-            //foreach($_kel_dok AS $key => $val){
-            
-          //}
+            $_authorisasi = $this->input->post('authorisasi', TRUE);          
+            $_upload = $this->upload->data('file_name');               
             $count=count($_kel_dok);
             for ($i=0; $i <=$count-1 ; $i++) {       
               $data = array(

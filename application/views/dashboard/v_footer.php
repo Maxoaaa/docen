@@ -46,7 +46,9 @@
       'scrollY'     : true,
       'scrollCollapse': true
     })
-    $('#example4_search').DataTable()
+    $('#example4_search').DataTable({
+      'searching'   : false
+    })
     $('#example2').DataTable({
       'paging'      : false,
       'lengthChange': true,
@@ -89,10 +91,10 @@
     $(document).ready(function(){
       $("#title").autocomplete({
           minLength:1,
-          source: "<?php echo base_url('dashboard/get_autocomplete/?');?>"
+          source: "<?php echo base_url('dashboard/get_autocomplete/');?>"
       });
     });
 </script>
- 
+
 </body>
 </html>

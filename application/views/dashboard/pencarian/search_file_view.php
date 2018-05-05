@@ -42,7 +42,7 @@
                   foreach($list_pencarian as $row){
                 ?>
                 <tr>
-                  <td><?php echo $no++ ?></td>
+                  <td><?php echo $no++ ?></td>                  
                   <td><?php echo $row->nama_dok; ?></td>
                   <td><?php echo $row->jenis_dok; ?></td>
                   <td><?php if ($row->standar == '1'){
@@ -81,7 +81,11 @@
                     echo '<input type="checkbox" class="minimal" checked>';
                     }else{echo '<input type="checkbox" class="minimal" disabled>';}
                     ?></td>
-                  <td><a href="#" type="button" name="button" class="btn btn-primary" role="button">Lihat</a></td>
+                  <td>
+                  <button type="button" class="btn btn-block btn-info" data-toggle="modal" data-target="#modal-default<?php echo $row->dokumen_id;?>">
+                        Lihat
+                  </button>
+                  </td>
 
                 </tr>                
                 <?php
@@ -99,3 +103,35 @@
 
   </div>
   <!-- /.content-wrapper -->
+  
+<?php
+                       foreach ($list_pencarian as $rou) {
+                           
+                 ?>
+        <div class="modal fade" id="modal-default<?php echo $rou->dokumen_id;?>">
+          <div class="modal-dialog" style="width: 100%;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Lihat File</h4>
+              </div>
+              <div class="modal-body" style="height: 650px;">
+               
+                <object data="<?php echo base_url().'fileupload/'.$rou->file;?>" type="application/pdf" style="width: 100%; height: 100%;">
+                       
+                </object>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button> 
+                <a href="<?php echo base_url().'fileupload/'.$rou->file;?>" target="_blank"><button type="button" class="btn btn-primary">Unduh</button></a>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+              <?php
+                }
+              ?> 

@@ -8,22 +8,20 @@ class Search extends CI_Controller {
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("login"));
 		}
-	} 
+	}
 	public function index() 
 	{
 		$_cari = $this->input->get('q', TRUE);
 		$usan = $this->session->userdata('nama');
-		$kue = $this->M_login->hak_ak($usan);
-    	//panggil fungsi listAll dari User_model
+		$kue = $this->M_login->hak_ak($usan);    	
         $query = $this->M_dokumen->list_search($_cari);
-        $query_ceklis = $this->M_dokumen->list_search($_cari);
+        //$query_modal = $this->M_dokumen->list_detail($cari);        
         //$judul_standar['natalo']= $id;  
         
         $dataHalaman = array( 
           'list_pencarian' => $query,
-          'ceklis'=>$query_ceklis,
-          'da' => $kue,
-          //'nama_admin'=>$usan
+          //'query_modal' => $query_modal,          
+          'da' => $kue,          
         );
 		$this->load->view('dashboard/v_header',$dataHalaman);
 		$this->load->view('dashboard/pencarian/search_file_view');

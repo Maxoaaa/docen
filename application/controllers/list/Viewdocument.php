@@ -66,7 +66,6 @@ class ViewDocument extends CI_Controller {
           'jumlah_dok19'=>$total_dok19,
           'jumlah_dok20'=>$total_dok20
         );
-              
    	$this->load->view('dashboard/v_header',$dataHalaman); 
 		$this->load->view('dashboard/daftarfile/entry_file_view',$judul_standar);
 		$this->load->view('dashboard/v_footer');

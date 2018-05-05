@@ -16,7 +16,7 @@
       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="margin-bottom: 5px;">
         <a href="<?php echo base_url() ?>list/AddDocument" class="btn btn-success"><span class="glyphicon glyphicon-plus">Tambah</span></a>                  
       </div>      
-        <div class="col-xs-offset-6 col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="margin-bottom: 5px;">
+        <div class="col-xs-offset-3 col-sm-offset-6 col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="margin-bottom: 5px;">
           <form action="<?php echo base_url();?>search" method="get" class="form-group"> 
             <div class="input-group">
               <input type="text" name="q" class="form-control" id="title" value="" placeholder="Search..." required>

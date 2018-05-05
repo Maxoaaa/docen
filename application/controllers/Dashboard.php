@@ -48,10 +48,10 @@ class Dashboard extends CI_Controller {
             $result = $this->M_dokumen->search_blog($_GET['term']);
             if (count($result) > 0) {
             foreach ($result as $row)
-                $arr_result[] = $row->jenis_dok;
+                $arr_result[] = $row->nama_dok;
                 echo json_encode($arr_result);
             }
-        }
+        } 
     }
     public function daftarpdf()
     {

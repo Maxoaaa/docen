@@ -49,7 +49,9 @@ class Dashboard extends CI_Controller {
             if (count($result) > 0) {
             foreach ($result as $row)
                 $arr_result[] = $row->nama_dok;
+           // $arr_result[] = $row->jenis_dok;
                 echo json_encode($arr_result);
+
             }
         } 
     }

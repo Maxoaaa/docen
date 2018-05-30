@@ -85,12 +85,7 @@
         <!--inisialisasi hak ases-->
         <?php
          if($buba == 'admin'){
-        ?> 
-        <!--<li>
-          <a href="<?php echo base_url() ?>dashboard">
-            <i class="fa fa-user-times"></i> <span>Reset Login Pengguna</span>
-          </a>
-        </li>-->
+        ?>         
         <li>
           <a href="<?php echo base_url() ?>pengguna/users">
             <i class="fa fa-users"></i> <span>Users</span>
@@ -99,7 +94,16 @@
         <?php
           }
         ?>
-        
+        <li>
+          <a href="<?php echo base_url() ?>list/adddocument">
+            <i class="fa fa-plus"></i> <span>Tambah Data</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo base_url() ?>search/page">
+            <i class="fa fa-search"></i> <span>Pencarian</span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

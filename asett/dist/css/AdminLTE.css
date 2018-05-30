@@ -23,6 +23,21 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.ikon{
+	background-color: #d2d6de;
+	display: inline-block;
+	font-size: 2.2em;
+	line-height: 65px;
+	
+	width: 65px;
+	height: 65px;
+	text-align: center;
+	position: relative;
+	border-radius: 50%;
+	text-decoration: none;
+	z-index: 1;
+	color: #000;
+}
 /* Layout */
 .wrapper {
   height: 100%;
@@ -3183,7 +3198,7 @@ table.text-center th {
 .lockscreen-wrapper {
   max-width: 400px;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 4%;
 }
 /* User name [optional] */
 .lockscreen .lockscreen-name {

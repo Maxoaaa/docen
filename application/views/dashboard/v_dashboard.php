@@ -1,4 +1,3 @@
- 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -9,7 +8,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="<?php echo base_url() ?>dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
-      </ol>
+      </ol> 
 
     <section class="content">
       <div class="row">  

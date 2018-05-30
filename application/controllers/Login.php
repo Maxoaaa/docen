@@ -36,7 +36,7 @@ class Login extends CI_Controller {
  
 			$this->session->set_userdata($data_session);
  			echo "string";
-			redirect(site_url("dashboard"));
+			redirect(site_url("menu"));
  
 		}else{				
 			$this->session->set_flashdata('notification', 'Username dan Password tidak ditemukan');	

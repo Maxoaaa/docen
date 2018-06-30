@@ -7,7 +7,7 @@ class Menu extends CI_Controller {
 		//$this->load->model('login/m_login');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("login"));
-		}		
+		}	
 	} 
 	public function index()
 	{		

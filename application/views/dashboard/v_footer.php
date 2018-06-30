@@ -77,7 +77,7 @@
       'autoWidth'   : true,      
       'fixedColumns': true     
     })          
-  })
+  }) 
     $('.selecto').select2()
     $('#datepicker').datepicker({
       autoclose: true,

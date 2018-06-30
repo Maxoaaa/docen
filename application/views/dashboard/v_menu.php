@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Menu Pilihan</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <link rel="stylesheet" href="<?php echo base_url() ?>asett/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url() ?>asett/bower_components/font-awesome/css/font-awesome.min.css">  
-  <link rel="stylesheet" href="<?php echo base_url() ?>asett/dist/css/AdminLTE.css">s
+  <link rel="stylesheet" href="<?php echo base_url() ?>asett/dist/css/AdminLTE.css">
 </head>
-<body class="hold-transition lockscreen" style="height:auto"><?php foreach($da as $row){$buba= $row->author;$bubi= $row->username; }  ?>
+<body class="hold-transition lockscreen" style="height:auto">
+  <?php foreach($da as $row){$buba= $row->author;$bubi= $row->username; }  ?>
 <div class="lockscreen-wrapper">
   <div class="lockscreen-logo">
     <a href="<?php echo base_url() ?>menu">Selamat Datang	</a>

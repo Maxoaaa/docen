@@ -35,7 +35,6 @@ class Login extends CI_Controller {
 				);
  
 			$this->session->set_userdata($data_session);
- 			echo "string";
 			redirect(site_url("menu"));
  
 		}else{				

@@ -38,7 +38,7 @@ class Dashboard extends CI_Controller {
 		    'capai8'=>$pencapaian8,
 		    'capai9'=>$pencapaian9,		    
 	    ); 
-
+ 
 		$this->load->view('dashboard/v_header',$array2);
 		$this->load->view('dashboard/v_dashboard');
 		$this->load->view('dashboard/v_footer');

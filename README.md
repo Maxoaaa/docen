@@ -17,7 +17,7 @@ berkas yg terkumpul akan terlihat pada standar yang akan dipilih.
 tambahkan baru dan isi sesuai nama dan keterangan data lainnya, masukan juga file yang telah discan , setelah itu kli tombol upload
 file yang telah diupload akan diperlihatkan pada standar yang telah dipilih di dashbaord.
 
-<h1>Webiste ini masih dalam pengembangan.</h1>
+<h1>Website ini masih dalam pengembangan.</h1>
 
 
 

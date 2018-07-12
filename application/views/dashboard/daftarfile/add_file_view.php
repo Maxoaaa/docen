@@ -29,7 +29,7 @@
 									'class' => 'form-horizontal',
 									'id'=>'formuser'
 							);
-								//ho form_open('list/adddocument/savedok',$atribut);
+								//echo form_open('list/adddocument/savedok',$atribut);
 								echo form_open_multipart('list/adddocument/savedok',$atribut);
 						?>
 							<div class="box-body">

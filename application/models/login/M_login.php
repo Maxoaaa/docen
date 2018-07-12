@@ -1,5 +1,5 @@
 <?php
-
+ 
 class M_login extends CI_Model{	
 	//var $tabel = sudah berada pada kontroller, $shere berada pada kontroler
 	var $tabel_dashboard = 'kelengkapan_data';		

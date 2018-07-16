@@ -65,7 +65,7 @@
 									<label class="col-sm-2 control-label">Jenis Dokumen</label>
 									<div class="col-sm-6">                 
 										<select class="form-control selecto" style="width: 100%;" data-placeholder="Pilih Jenis Dokumen" name="jenis">
-											<?php
+											<?php 
 												foreach($query_tampil as $row){
 											?>  
 											<option><?php echo $row->jenis_dokumen; ?></option>                      

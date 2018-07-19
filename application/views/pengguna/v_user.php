@@ -214,9 +214,9 @@
                                       echo 'selected'; 
                                     }elseif (($rou->author =='admin') && ($op->author=='admin')) {
                                       echo 'selected'; 
-                                    }
+                                    } 
                                     echo '>'.$op->author;
-                                    ?>
+                                    ?> 
                                   </option>                      
                                   <?php
                                      }

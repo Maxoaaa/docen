@@ -57,7 +57,11 @@
                         Lihat
                       </button>
                     </div>
-                    <div style="margin: 0 5px; float: left;"><a href="<?php echo base_url().'fileupload/'.$row->file  ?>"  target="_blank"><button type="button" class="btn btn-block btn-info">Unduh</button></a></div>  
+                    <div style="margin: 0 5px; float: left;">
+                      <a href="<?php echo base_url().'fileupload/'.$row->file  ?>"  target="_blank">
+                        <button type="button" class="btn btn-block btn-info">Unduh</button>
+                      </a>
+                    </div>  
  
                                      
                   </td>                  
@@ -91,10 +95,8 @@
                   <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Lihat File</h4>
               </div>
-              <div class="modal-body" style="height: 650px;">
-               
-                <object data="<?php echo base_url().'fileupload/'.$rou->file;?>" type="application/pdf" style="width: 100%; height: 100%;">
-                       
+              <div class="modal-body" style="height: 650px;">               
+                <object data="<?php echo base_url().'fileupload/'.$rou->file;?>" type="application/pdf" style="width: 100%; height: 100%;">                       
                 </object>
               </div>
               <div class="modal-footer">

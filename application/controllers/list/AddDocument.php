@@ -49,7 +49,7 @@ class AddDocument extends CI_Controller {
             $_jenis_dok = $this->input->post('jenis', TRUE);
             $_authorisasi = $this->input->post('authorisasi', TRUE);          
             $_upload = $this->upload->data('file_name');               
-            $count=count($_kel_dok);
+            $count=count($_kel_dok); 
             for ($i=0; $i <=$count-1 ; $i++) {       
               $data = array(
                 'no_surat' => $_no_dok,
@@ -72,6 +72,6 @@ class AddDocument extends CI_Controller {
            }
       }
             
-  }
+    }
   
 }

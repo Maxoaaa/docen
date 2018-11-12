@@ -48,7 +48,7 @@
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Kelompok Dokumen</label>
 									<div class="col-sm-6">                    
-										<select class="form-control selecto" style="width: 100%;" multiple="multiple" data-placeholder="Pilih Standar" name="kelompok[]">
+										<select class="form-control selecto" style="width: 100%;" multiple="multiple" data-placeholder="Pilih Standar" name="kelompok[]"> 
 											<option value="1">Standar 1</option>
 											<option value="2">Standar 2</option>
 											<option value="3">Standar 3</option>
@@ -129,9 +129,9 @@
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Pilih File*</label>
 									<div class="col-sm-6">
-										<input type="file" class="form-control" name="filepdf" id="exampleInputFile" accept="application/pdf" required />                    
+										<input type="file" class="form-control" name="filepdf" id="exampleInputFile" accept="application/pdf" required />
 									</div>
-								</div>                
+								</div>
 							</div>
 							<!-- /.box-body -->
 							<div class="box-footer">                
